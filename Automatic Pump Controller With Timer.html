@@ -1,0 +1,244 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Untitled</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="Web Page Maker">
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '777148238716070');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=777148238716070&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<style type="text/css">
+/*----------Text Styles----------*/
+.ws6 {font-size: 8px;}
+.ws7 {font-size: 9.3px;}
+.ws8 {font-size: 11px;}
+.ws9 {font-size: 12px;}
+.ws10 {font-size: 13px;}
+.ws11 {font-size: 15px;}
+.ws12 {font-size: 16px;}
+.ws14 {font-size: 19px;}
+.ws16 {font-size: 21px;}
+.ws18 {font-size: 24px;}
+.ws20 {font-size: 27px;}
+.ws22 {font-size: 29px;}
+.ws24 {font-size: 32px;}
+.ws26 {font-size: 35px;}
+.ws28 {font-size: 37px;}
+.ws36 {font-size: 48px;}
+.ws48 {font-size: 64px;}
+.ws72 {font-size: 96px;}
+.wpmd {font-size: 13px;font-family: Arial,Helvetica,Sans-Serif;font-style: normal;font-weight: normal;}
+/*----------Para Styles----------*/
+DIV,UL,OL /* Left */
+{
+ margin-top: 0px;
+ margin-bottom: 0px;
+}
+</style>
+
+<script language="JavaScript1.4" type="text/javascript">
+<!--
+function jsPlay(soundobj) {
+ var thissound= eval("document."+soundobj);
+ try {
+     thissound.Play();
+ }
+ catch (e) {
+     thissound.DoPlay();
+ }
+}
+//-->
+</script>
+
+<script language="javascript" type="text/javascript">
+<!--
+function MM_swapImgRestore() {
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() {
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+//-->
+</script>
+
+</head>
+<body>
+<div id="g_html1" style="position:absolute; overflow:hidden; left:1081px; top:14px; width:200px; height:54px; z-index:0">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Digital Clock - Amber + Blue</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', monospace;
+     // background: #000;  /* Black background for LED effect */
+    }
+    .datetime {
+      position: fixed;
+      top: 10px;
+      right: 30px;
+      text-align: right;
+      padding: 15px 20px;
+    }
+    .time {
+      font-size: 2.0rem;          /* Bigger glowing numbers */
+      font-weight: bold;
+      color: #ffbf00;             /* Amber (yellow-orange) */
+      text-shadow: 0 0 10px #ffbf00, 0 0 20px #ffaa00, 0 0 40px #ff8000;
+      letter-spacing: 0.1em;
+    }
+    .date {
+      font-size: 1.0rem;
+      color: #00aaff;             /* Cool blue for date/day */
+      margin-top: 6px;
+      text-shadow: 0 0 8px #00aaff, 0 0 16px #0099ff;
+    }
+    /* Import a digital-style font */
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+  </style>
+</head>
+<body>
+  <div class="datetime">
+    <div class="time" id="time">--:--:--</div>
+    <div class="date" id="date">--, -- --- ----</div>
+  </div>
+
+  <script>
+    const timeEl = document.getElementById('time');
+    const dateEl = document.getElementById('date');
+
+    function updateDateTime() {
+      const now = new Date();
+
+      // Time (24-hour format)
+      const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+      timeEl.textContent = now.toLocaleTimeString([], timeOptions);
+
+      // Date & Day
+      const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      dateEl.textContent = now.toLocaleDateString('en-IN', dateOptions);
+    }
+
+    // Run immediately & then every second
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+  </script>
+</body>
+</html></div>
+
+<div id="g_roundrect1" style="position:absolute; overflow:hidden; left:0px; top:0px; width:1300px; height:157px; z-index:1"><img border=0 width="100%" height="100%" alt="" src="images/roundrect1400261171.png"></div>
+
+<div id="g_image2" style="position:absolute; overflow:hidden; left:511px; top:17px; width:250px; height:52px; z-index:2"><img src="images/Company Name.png" alt="" title="" border=0 width=250 height=52></div>
+
+<div id="g_image1" style="position:absolute; overflow:hidden; left:16px; top:17px; width:172px; height:117px; z-index:3"><img src="images/Logo.png" alt="" title="" border=0 width=172 height=117></div>
+
+<div id="g_nav10d" style="position:absolute; left:681px; top:116px; z-index:4"><a onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('g_nav10','','images/nav14007205460a.gif',1)" href="index.html"><img name="g_nav10" onLoad="MM_preloadImages('images/nav14007205460a.gif')" alt="" border=0 src="images/nav14007205460i.gif"></a></div>
+<div id="g_nav11d" style="position:absolute; left:835px; top:116px; z-index:4"><a onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('g_nav11','','images/nav14007205461a.gif',1)" href="Products.html"><img name="g_nav11" onLoad="MM_preloadImages('images/nav14007205461a.gif')" alt="" border=0 src="images/nav14007205461i.gif"></a></div>
+<div id="g_nav12d" style="position:absolute; left:989px; top:116px; z-index:4"><a onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('g_nav12','','images/nav14007205462a.gif',1)" href="Aboutus.html"><img name="g_nav12" onLoad="MM_preloadImages('images/nav14007205462a.gif')" alt="" border=0 src="images/nav14007205462i.gif"></a></div>
+<div id="g_nav13d" style="position:absolute; left:1143px; top:116px; z-index:4"><a onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('g_nav13','','images/nav14007205463a.gif',1)" href="Contactus.html"><img name="g_nav13" onLoad="MM_preloadImages('images/nav14007205463a.gif')" alt="" border=0 src="images/nav14007205463i.gif"></a></div>
+
+<!--[if IE]><div id="text1" style="position:absolute; overflow:hidden; left:160px; top:188px; width:978px; height:977px; z-index:5; border:#FF00FF 10px double"><![endif]-->
+<!--[if !IE]>--><div id="text1" style="position:absolute; overflow:hidden; left:160px; top:188px; width:958px; height:957px; z-index:5; border:#FF00FF 10px double"><!--<![endif]-->
+
+<div class="wpmd">
+<div align=center><font face="Calibri" class="ws16" style="background-color:#00FFFF;"><B><U>Automatic Pump Controller With Timer</U></B></font></div>
+<div align=center><font face="Calibri" class="ws16" style="background-color:#00FFFF;"><B><U><BR></U></B></font></div>
+<div><font face="Calibri" class="ws18" style="background-color:#00FFFF;"><B><U><BR></U></B></font></div>
+<div><font face="Calibri" class="ws18" style="background-color:#00FFFF;"><B><U><BR></U></B></font></div>
+<div><font face="Calibri" class="ws18" style="background-color:#00FFFF;"><B><U><BR></U></B></font></div>
+<div><font face="Calibri" class="ws18" style="background-color:#00FFFF;"><B><U><BR></U></B></font></div>
+<div><font face="Calibri" class="ws18" style="background-color:#00FFFF;"><B><U><BR></U></B></font></div>
+<div><font face="Calibri" class="ws18" style="background-color:#00FFFF;"><B><U><BR></U></B></font></div>
+<div><font face="Calibri" class="ws18" style="background-color:#00FFFF;"><B><U><BR></U></B></font></div>
+<div><font face="Calibri" class="ws18" style="background-color:#00FFFF;"><B><U><BR></U></B></font></div>
+<div><font face="Calibri" class="ws18" style="background-color:#00FFFF;"><B><U><BR></U></B></font></div>
+<div><font face="Calibri" class="ws18" style="background-color:#00FFFF;"><B><U><BR></U></B></font></div>
+<div><font face="Calibri" class="ws18" style="background-color:#00FFFF;"><B><U><BR></U></B></font></div>
+<div><font color="#000000" face="Calibri" class="ws16" style="background-color:#00FFFF;"><B><U>Key Features</U></B></font><font color="#000000" face="Calibri" class="ws12" style="background-color:#00FFFF;"><B><U>:</U></B></font></div>
+<div><font color="#000000" face="Calibri" class="ws12"><U><BR></U></font></div>
+<UL>
+<li><font color="#000000" face="Calibri" class="ws12"><B>Level Indicator:</B></font><font color="#000000" face="Calibri" class="ws12"> Displays the current water levels for accurate </font></li>
+</UL>
+<div><font color="#000000" face="Calibri" class="ws12">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; monitoring and convenience.</font></div>
+<UL>
+<li><font color="#000000" face="Calibri" class="ws12"><B>Dry Run Protection:</B></font><font color="#000000" face="Calibri" class="ws12"> Safeguards the pump from damage by </font></li>
+</UL>
+<div><font color="#000000" face="Calibri" class="ws12">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; automatically halting operation during water scarcity.</font></div>
+<UL>
+<li><font color="#000000" face="Calibri" class="ws12"><B>Buzzer System:</B></font><font color="#000000" face="Calibri" class="ws12"> Alerts users with sound notifications for key status changes, </font></li>
+</UL>
+<div><font color="#000000" face="Calibri" class="ws12">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; such as low water levels or full tank capacity.</font></div>
+<UL>
+<li><font color="#000000" face="Calibri" class="ws12"><B>All Indicators:</B></font><font color="#000000" face="Calibri" class="ws12"> Provides clear visual signals for power, pump status, </font></li>
+</UL>
+<div><font color="#000000" face="Calibri" class="ws12">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; water levels, and other operational modes.</font></div>
+<UL>
+<li><font color="#000000" face="Calibri" class="ws12"><B>Automatic Operation:</B></font><font color="#000000" face="Calibri" class="ws12"> Controls water flow based on tank levels, ensuring </font></li>
+</UL>
+<div><font color="#000000" face="Calibri" class="ws12">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uninterrupted supply without overflow or wastage.</font></div>
+<UL>
+<li><font color="#000000" face="Calibri" class="ws12"><B>Robust Design:</B></font><font color="#000000" face="Calibri" class="ws12"> Engineered for long-lasting performance and compatibility </font></li>
+</UL>
+<div><font color="#000000" face="Calibri" class="ws12">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; with various pump types and tank capacities.</font></div>
+<UL>
+<li><font color="#000000" face="Calibri" class="ws12"><B>Energy Efficiency:</B></font><font color="#000000" face="Calibri" class="ws12"> Minimal power consumption makes it eco-friendly and </font></li>
+</UL>
+<div><font color="#000000" face="Calibri" class="ws12">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cost-effective.</font></div>
+<UL>
+<li><font color="#000000" face="Calibri" class="ws12"><B>Easy Setup:</B></font><font color="#000000" face="Calibri" class="ws12"> User-friendly installation and intuitive controls simplify operation.</font></li>
+</UL>
+<div><font color="#000000" face="Calibri" class="ws12"><BR></font></div>
+<div><font color="#000000" face="Calibri" class="ws12"><BR></font></div>
+<div><font color="#000000" face="Calibri" class="ws16" style="background-color:#00FFFF;"><B><U>Technical Specifications:</U></B></font></div>
+<div><font color="#000000" face="Calibri" class="ws12"><BR></font></div>
+<div><font color="#000000" face="Calibri" class="ws12">Parameter&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ----&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Specification</font></div>
+<div><font color="#000000" face="Calibri" class="ws12">Power Source&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ----&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AC mains (230V AC) </font></div>
+<div><font color="#000000" face="Calibri" class="ws12">Pump Control Output&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ----&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2-channel relay (12V/ 7A) </font></div>
+<div><font color="#000000" face="Calibri" class="ws12">Sensor Inputs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ----&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2–float switches or water level sensors (tank/borewell)</font></div>
+<div><font color="#000000" face="Calibri" class="ws12">Alert System&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ----&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Buzzer </font></div>
+<div><font color="#000000" face="Calibri" class="ws12">Operating Temperature&nbsp;&nbsp;&nbsp; ----&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0°C to +70°C</font></div>
+<div><font color="#000000" face="Calibri" class="ws12">Enclosure&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ----&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ABS or Polycarbonate casing with panel-mount LCD window</font></div>
+<div><font face="Calibri" class="ws12"><BR></font></div>
+<div><font face="Calibri" class="ws14"><BR></font></div>
+</div></div>
+
+<div id="image1" style="position:absolute; overflow:hidden; left:425px; top:263px; width:445px; height:295px; z-index:6"><img src="images/Automatic With Timer NB.png" alt="" title="" border=0 width=445 height=295></div>
+
+
+</body>
+</html>
